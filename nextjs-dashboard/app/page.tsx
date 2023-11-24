@@ -1,9 +1,8 @@
-import Image from 'next/image';
-
-import { lusitana } from '@/app/ui/fonts';
+import AcmeLogo from '@/app/ui/acme-logo';
 import { ArrowRightIcon } from '@heroicons/react/24/outline';
 import Link from 'next/link';
-import AcmeLogo from './ui/acme-logo';
+import { lusitana } from '@/app/ui/fonts';
+import Image from 'next/image';
 
 export default function Page() {
   return (
@@ -17,9 +16,9 @@ export default function Page() {
             className={`${lusitana.className} text-xl text-gray-800 md:text-3xl md:leading-normal`}
           >
             <strong>Welcome to Acme.</strong> This is the example for the{' '}
-            <Link href="https://nextjs.org/learn/" className="text-blue-500">
+            <a href="https://nextjs.org/learn/" className="text-blue-500">
               Next.js Learn Course
-            </Link>
+            </a>
             , brought to you by Vercel.
           </p>
           <Link
@@ -35,15 +34,15 @@ export default function Page() {
             src="/hero-desktop.png"
             width={1000}
             height={760}
-            className="hidden md:block"
             alt="Screenshots of the dashboard project showing desktop version"
+            className="hidden md:block"
           />
           <Image
             src="/hero-mobile.png"
             width={560}
             height={620}
-            className="block md:hidden"
             alt="Screenshot of the dashboard project showing mobile version"
+            className="block md:hidden"
           />
         </div>
       </div>
